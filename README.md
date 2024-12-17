@@ -19,43 +19,45 @@ At startup, FRIDAY displays an ASCII art banner:
       Your personal CLI assistant for Debian Linux.
 ```
 
-## Introduction
+
+## 🚀 Introduction
 
 FRIDAY is a Bash script designed to be your personal command-line assistant on Debian Linux systems. It automates routine tasks, provides helpful prompts, and enhances your productivity.
 
-## Features
+> **Fun Fact:** Born during a caffeine-fueled coding marathon when I  realized clicking multiple times is for mere mortals! 😉 Created to save precious milliseconds that could be spent debating tabs vs. spaces. 
 
-- **Essentials Launcher**: Quickly access essential applications and tools.
-- **Interactive Prompts**: User-friendly interface with ASCII art and greetings.
-- **Logging**: Maintains a log of commands and actions for reference.
-- **Custom Scripts**: Easily extend functionality by adding or modifying scripts.
+## ✨ Features
 
-## Installation
+- **Essentials Launcher**: Quickly access essential applications and tools
+- **Interactive Menu**: Comprehensive options for various tasks
+- **Logging**: Detailed command and action tracking
+- **Custom Scripts**: Easily extensible functionality
+- **Function Library**: Modular, reusable functions
+
+## 🔧 Installation
 
 1. **Clone the Repository**
-
    ```bash
    git clone https://github.com/your_username/FRIDAY-CLI-BASH-Assistant.git
    ```
 
-2. **Navigate to the Project Directory**
-
+2. **Navigate to Project Directory**
    ```bash
    cd FRIDAY-CLI-BASH-Assistant
    ```
 
-3. **Make the Main Script Executable**
-
+3. **Make Scripts Executable**
    ```bash
    chmod +x FRIDAY.sh
+   chmod +x scripts/essentials.sh
+   chmod +x scripts/show_options.sh
    ```
 
 4. **Ensure Dependencies**
+   - Verify Bash installation: `bash --version`
+   - Install additional dependencies as needed
 
-   - Verify that you have Bash installed (`bash --version`).
-   - Install any additional dependencies required by your custom scripts.
-
-## Usage
+## 🖥️ Usage
 
 Run the main script:
 
@@ -63,106 +65,71 @@ Run the main script:
 ./FRIDAY.sh
 ```
 
-- **Startup**: You'll be greeted with an ASCII art banner and a welcome message.
-- **Essentials Prompt**: When asked, "Shall I bring up the essentials for you? (y/n)", enter `y` or `n`.
-  - If `y`, FRIDAY will execute the `essentials.sh` script.
-  - If `n`, you'll proceed without launching the essentials.
-- **Options**: FRIDAY will display available options via `show_options.sh`.
-- **Logging**: All actions are logged in 
+### Options Menu
 
-commands.log
+FRIDAY presents a comprehensive menu of options:
 
-.
-
-## Directory Structure
-
-- 
-
-FRIDAY.sh
-
-: The main script to run the assistant.
-- 
-
-scripts
-
-: Directory containing supplementary scripts.
-  - `my_functions.sh`: Contains functions sourced by 
-
-FRIDAY.sh
-
-.
-  - `essentials.sh`: Script to launch essential tools (customizable).
-  - `show_options.sh`: Displays a list of available options to the user.
-- 
-
-logs
-
-: Contains log files.
-  - `commands.log`: Logs of commands with timestamps.
-
-## Customization
-
-- **Adding Functions**: Edit 
-
-my_functions.sh
-
- to add new functions.
-- **Modifying Essentials**: Customize 
-
-essentials.sh
-
- with your preferred applications.
-- **Updating Options**: Modify 
-
-show_options.sh
-
- to change available options.
-
-## Logging Details
-
-FRIDAY logs important events and user inputs:
-
-- Log file located at 
-
-commands.log
-
-.
-- Includes timestamps and descriptions of actions.
-- Useful for reviewing past activities or debugging.
-
-
-
-## Troubleshooting
-
-- **Functions File Not Found**: If you receive an error about `my_functions.sh` not being found, ensure that:
-  - 
-
-FRIDAY.sh
-
- and the 
-
-scripts
-
- directory are in the correct locations.
-  - The scripts have the appropriate permissions.
-
-## Contributing
-
-Contributions are welcome! Follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/NewFeature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/NewFeature`).
-5. Open a pull request.
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Your Name - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/your_username/FRIDAY-CLI-BASH-Assistant](https://github.com/your_username/FRIDAY-CLI-BASH-Assistant)
+```plaintext
+------------------------------------
+What can I do for you today?
+------------------------------------
+Here are the available options:
+1. System Diagnosis
+2. Google Chrome
+3. Visual Studio Code
+4. Teams
+5. Terminal
+6. Lock Screen
+7. Logout
+8. Trello
+9. Timer
+10. Postman
+11. Azure Storage Explorer
+12. DBeaver
+13. Screenshot
+14. Mail
+15. Soft Reset
+16. System Updates
+------------------------------------
 ```
+
+## 📂 Directory Structure
+
+- `FRIDAY.sh`: Main assistant script
+- `scripts/`: Supplementary scripts
+  - `my_functions.sh`: Reusable functions
+  - `essentials.sh`: Essential tools launcher
+  - `show_options.sh`: Option handling
+- `logs/`: Log file storage
+
+## 🛠️ Customization
+
+### Modifying Essential Applications
+
+Easily customize `essentials.sh` to launch your preferred applications:
+
+```bash
+echo "Starting YourApp"
+log_command "Starting YourApp"
+yourapp_command
+log_command "Executed command: yourapp_command"
+```
+
+## 🐛 Troubleshooting
+
+- Ensure script permissions: `chmod +x FRIDAY.sh scripts/*.sh`
+- Verify application installations
+- Check script locations and paths
+
+## 🤝 Contributing
+
+Contributions are warmly welcomed! Feel free to submit pull requests or open issues.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for details.
+
+---
+
+**Disclaimer**: 
+This project was lovingly crafted during those moments when I realized my repetitive tasks were stealing my soul, one click at a time. FRIDAY is my rebellion against mundane computer interactions - because life's too short to not automate the boring stuff! 🖥️💻 Remember, every second saved is a second closer to world domination... or at least to grabbing another coffee. ☕

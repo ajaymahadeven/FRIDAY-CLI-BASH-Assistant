@@ -36,8 +36,8 @@ while true; do
 
     # Check for exit-related commands first
     if [[ "$OPTION" == "exit" || "$OPTION" == "bye" || "$OPTION" == "goodbye" ]]; then
-        echo "Goodbye!";
-        exit 0
+        ./scripts/goodbye.sh
+        exit 0;
     fi
 
     # Handle other options
