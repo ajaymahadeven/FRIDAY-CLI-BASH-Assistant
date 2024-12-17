@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# shellcheck disable=SC1091
-source ./scripts/goodbye.sh
 
 # Get the current hour
 CURRENT_HOUR=$(date +%H)
@@ -27,8 +25,6 @@ echo "------------------------------------";
 echo "Shall I bring up the essentials for you? (y/n)";
 
 read -r OPTION;
-
-
 
 if [ "$OPTION" == "y" ] || [ "$OPTION" == "yes" ]; then
 echo "------------------------------------";
